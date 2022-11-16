@@ -1,0 +1,16 @@
+
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.dagger.hilt.android'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation core.core
+
+    implementation core.hilt
+    kapt core.hiltKapt
+
+    testImplementation test.jUnit
+    androidTestImplementation test.androidJUnit
+    androidTestImplementation test.esspresso
+
+}

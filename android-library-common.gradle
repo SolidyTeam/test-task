@@ -1,0 +1,8 @@
+
+apply plugin: 'com.android.library'
+
+android {
+    defaultConfig {
+        consumerProguardFiles "consumer-rules.pro"
+    }
+}

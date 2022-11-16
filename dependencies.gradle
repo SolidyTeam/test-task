@@ -1,0 +1,46 @@
+ext {
+    androidx_core = '1.9.0'
+    androidx_appcompat = '1.5.1'
+    material = "1.7.0"
+    constraintlayout = "2.1.4"
+    lifecycle = "2.5.0"
+    activityKtx = "1.5.1"
+    fragmentKtx = "1.5.2"
+    hiltCompiler = "1.0.0"
+
+    coroutines = "1.6.21"
+    kotlin_serialization = '1.4.0'
+    retrofit = "2.9.0"
+    loggingInterceptor = "4.9.1"
+    kotlinSerializationConverter = "0.8.0"
+
+    jUnit = "4.13.2"
+    androidJUnit = "1.1.3"
+    esspresso = "3.4.0"
+
+    core = [
+            core              : "androidx.core:core-ktx:$androidx_core",
+            appCompat         : "androidx.appcompat:appcompat:$androidx_appcompat",
+            material          : "com.google.android.material:material:$material",
+            constraintlayout  : "androidx.constraintlayout:constraintlayout:$constraintlayout",
+            lifecycle         : "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle",
+            activityKtx       : "androidx.activity:activity-ktx:$activityKtx",
+            fragmentKtx       : "androidx.fragment:fragment-ktx:$fragmentKtx",
+            hiltCompiler      : "androidx.hilt:hilt-compiler:$hiltCompiler",
+
+            hilt              : "com.google.dagger:hilt-android:$HILT_VERSION",
+            hiltKapt          : "com.google.dagger:hilt-compiler:$HILT_VERSION",
+
+            coroutines        : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines",
+            serialization     : "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_serialization",
+            retrofit          : "com.squareup.retrofit2:retrofit:$retrofit",
+            loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$loggingInterceptor",
+            retrofitConverter : "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$kotlinSerializationConverter",
+    ]
+
+    test = [
+            jUnit       : "junit:junit:$jUnit",
+            androidJUnit: "androidx.test.ext:junit:$androidJUnit",
+            esspresso   : "androidx.test.espresso:espresso-core:$esspresso"
+    ]
+}
