@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "test-task"
 include ':app'
+include ':feature:core'
+include ':feature:coreui'
+include ':feature:data'
