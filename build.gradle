@@ -1,6 +1,74 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    ext {
+        ANDROID_APPLICATION_ID = "com.bp.digital.cross.business"
+        VERSION_CODE = 1
+        VERSION_NAME = "1.0"
+
+        MIN_SDK_VERSION = 23
+        COMPILE_SDK_VERSION = 33
+        TARGET_SDK_VERSION = 33
+        COMPOSE_OPTIONS_VERSION = "1.3.2"
+
+        HILT_VERSION = "2.44.2"
+        NAV_VERSION = "2.5.3"
+        KOTLIN_VERSION = "1.7.20"
+    }
+
+    dependencies {
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$NAV_VERSION"
+    }
+}
+
 plugins {
     id 'com.android.application' version '7.3.1' apply false
     id 'com.android.library' version '7.3.1' apply false
-    id 'org.jetbrains.kotlin.android' version '1.7.20' apply false
+    id 'org.jetbrains.kotlin.android' version "$KOTLIN_VERSION" apply false
+    id 'com.google.dagger.hilt.android' version "$HILT_VERSION" apply false
+}
+
+apply from: 'dependencies.gradle'
+
+subprojects {
+    afterEvaluate {
+        if (project.hasProperty('application')) {
+            android {
+                defaultConfig {
+                    applicationId ANDROID_APPLICATION_ID
+
+                    versionCode VERSION_CODE
+                    versionName VERSION_NAME
+                }
+
+            }
+        }
+        if (project.hasProperty('android')) {
+            android {
+                compileSdk COMPILE_SDK_VERSION
+
+                defaultConfig {
+                    minSdk MIN_SDK_VERSION
+                    targetSdk TARGET_SDK_VERSION
+
+                    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                }
+
+                buildTypes {
+                    release {
+                        minifyEnabled false
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                    }
+                }
+
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_11
+                    targetCompatibility JavaVersion.VERSION_11
+                }
+                kotlinOptions {
+                    jvmTarget = JavaVersion.VERSION_11.toString()
+                }
+            }
+        }
+    }
 }
