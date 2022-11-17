@@ -1,4 +1,4 @@
-package am.solidy.data.dp.entity
+package am.solidy.data.db.entity
 
 import androidx.room.Embedded
 import androidx.room.Relation

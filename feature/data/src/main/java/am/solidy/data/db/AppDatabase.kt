@@ -1,10 +1,10 @@
-package am.solidy.data.dp
+package am.solidy.data.db
 
-import am.solidy.data.dp.dao.PostDao
-import am.solidy.data.dp.dao.UserDao
-import am.solidy.data.dp.dao.UserWithPostsDao
-import am.solidy.data.dp.entity.PostDbEntity
-import am.solidy.data.dp.entity.UserDbEntity
+import am.solidy.data.db.dao.PostDao
+import am.solidy.data.db.dao.UserDao
+import am.solidy.data.db.dao.UserWithPostsDao
+import am.solidy.data.db.entity.PostDbEntity
+import am.solidy.data.db.entity.UserDbEntity
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room

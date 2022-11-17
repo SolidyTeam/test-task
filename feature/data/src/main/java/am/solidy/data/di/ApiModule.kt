@@ -1,8 +1,8 @@
 package am.solidy.data.di
 
 import am.solidy.data.BuildConfig
-import am.solidy.data.network.api.PostsApi
-import am.solidy.data.network.api.UsersApi
+import am.solidy.data.network.api.PostApi
+import am.solidy.data.network.api.UserApi
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
@@ -89,10 +89,10 @@ object ApiModule {
 
     @Provides
     @Singleton
-    fun provideUsersApi(retrofit: Retrofit) = createApiService<UsersApi>(retrofit)
+    fun provideUserApi(retrofit: Retrofit) = createApiService<UserApi>(retrofit)
 
     @Provides
     @Singleton
-    fun providePostsApi(retrofit: Retrofit) = createApiService<PostsApi>(retrofit)
+    fun providePostApi(retrofit: Retrofit) = createApiService<PostApi>(retrofit)
 
 }

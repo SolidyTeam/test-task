@@ -1,6 +1,6 @@
 package am.solidy.data.di
 
-import am.solidy.data.dp.AppDatabase
+import am.solidy.data.db.AppDatabase
 import android.content.Context
 import dagger.Module
 import dagger.Provides

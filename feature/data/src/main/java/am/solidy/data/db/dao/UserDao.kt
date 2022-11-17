@@ -1,6 +1,6 @@
-package am.solidy.data.dp.dao
+package am.solidy.data.db.dao
 
-import am.solidy.data.dp.entity.UserDbEntity
+import am.solidy.data.db.entity.UserDbEntity
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy

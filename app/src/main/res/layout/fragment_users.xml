@@ -22,7 +22,7 @@
         android:id="@+id/rvUsers"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_0"
-        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_20"
         android:layout_weight="1"
         tools:listitem="@layout/item_user" />
 

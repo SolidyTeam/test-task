@@ -1,8 +1,8 @@
-package am.solidy.data.dp.mapper
+package am.solidy.data.db.mapper
 
 import am.solidy.core.entity.PostEntity
 import am.solidy.core.utils.Mapper
-import am.solidy.data.dp.entity.PostDbEntity
+import am.solidy.data.db.entity.PostDbEntity
 
 class MapperPostDbEntityToDomain : Mapper<PostDbEntity, PostEntity> {
 

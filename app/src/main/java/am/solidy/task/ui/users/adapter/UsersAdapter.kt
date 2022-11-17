@@ -63,6 +63,7 @@ class UsersAdapter(
                     0, length, Spanned.SPAN_EXCLUSIVE_INCLUSIVE
                 )
             }
+            append(" ")
             append(spannedCount)
         }
 

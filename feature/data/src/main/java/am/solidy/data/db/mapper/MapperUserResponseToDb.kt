@@ -1,7 +1,7 @@
-package am.solidy.data.dp.mapper
+package am.solidy.data.db.mapper
 
 import am.solidy.core.utils.Mapper
-import am.solidy.data.dp.entity.UserDbEntity
+import am.solidy.data.db.entity.UserDbEntity
 import am.solidy.data.network.entity.user.User
 
 class MapperUserResponseToDb : Mapper<User, UserDbEntity> {

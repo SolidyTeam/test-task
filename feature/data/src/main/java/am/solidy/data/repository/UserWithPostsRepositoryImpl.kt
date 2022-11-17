@@ -2,8 +2,8 @@ package am.solidy.data.repository
 
 import am.solidy.core.entity.UserWithPostsEntity
 import am.solidy.core.repository.UserWithPostsRepository
-import am.solidy.data.dp.dao.UserWithPostsDao
-import am.solidy.data.dp.mapper.MapperUserWithPostsDbEntityToDomain
+import am.solidy.data.db.dao.UserWithPostsDao
+import am.solidy.data.db.mapper.MapperUserWithPostsDbEntityToDomain
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.flow.Flow
@@ -19,7 +19,7 @@ class UserWithPostsRepositoryImpl @Inject constructor(
             userWithPosts?.let { MapperUserWithPostsDbEntityToDomain().map(userWithPosts) }
         }
 
-    override fun getUsersWithPosts(): Flow<List<UserWithPostsEntity>> =
+    override fun getUsers(): Flow<List<UserWithPostsEntity>> =
         dao.getUsersWithPosts().map { usersWithPosts ->
             MapperUserWithPostsDbEntityToDomain().map(usersWithPosts)
         }

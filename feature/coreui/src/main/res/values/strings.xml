@@ -3,5 +3,5 @@
 
     <!-- Users -->
     <string name="users_title">People</string>
-    <string name="users_post_count">Post count : </string>
+    <string name="users_post_count">Post count:</string>
 </resources>

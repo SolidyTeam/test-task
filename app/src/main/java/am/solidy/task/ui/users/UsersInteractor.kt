@@ -9,7 +9,7 @@ class UsersInteractor @Inject constructor(
     private val usersWithPostsRepository: UserWithPostsRepository
 ) {
 
-    fun getUsers() = usersWithPostsRepository.getUsersWithPosts()
+    fun getUsers() = usersWithPostsRepository.getUsers()
         .flowOn(Dispatchers.IO)
 
 }
