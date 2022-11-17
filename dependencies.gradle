@@ -7,12 +7,14 @@ ext {
     activityKtx = "1.5.1"
     fragmentKtx = "1.5.2"
     hiltCompiler = "1.0.0"
+    coil = "2.2.2"
 
     coroutines = "1.6.21"
     kotlin_serialization = '1.4.0'
     retrofit = "2.9.0"
     loggingInterceptor = "4.9.1"
     kotlinSerializationConverter = "0.8.0"
+    room = "2.4.3"
 
     jUnit = "4.13.2"
     androidJUnit = "1.1.3"
@@ -27,7 +29,7 @@ ext {
             activityKtx       : "androidx.activity:activity-ktx:$activityKtx",
             fragmentKtx       : "androidx.fragment:fragment-ktx:$fragmentKtx",
             hiltCompiler      : "androidx.hilt:hilt-compiler:$hiltCompiler",
-
+            coil              : "io.coil-kt:coil:$coil",
             navigationFragment: "androidx.navigation:navigation-fragment-ktx:$NAV_VERSION",
             navigationUi      : "androidx.navigation:navigation-ui-ktx:$NAV_VERSION",
 
@@ -39,6 +41,8 @@ ext {
             retrofit          : "com.squareup.retrofit2:retrofit:$retrofit",
             loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$loggingInterceptor",
             retrofitConverter : "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$kotlinSerializationConverter",
+            room              : "androidx.room:room-ktx:$room",
+            roomKapt          : "androidx.room:room-compiler:$room",
     ]
 
     test = [

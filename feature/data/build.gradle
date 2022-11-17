@@ -1,3 +1,6 @@
+plugins {
+    id "org.jetbrains.kotlin.plugin.serialization" version "$KOTLIN_VERSION"
+}
 
 apply from: "${rootProject.projectDir}/android-library-common.gradle"
 apply from: "${rootProject.projectDir}/common.gradle"
@@ -24,4 +27,6 @@ dependencies {
     implementation core.retrofit
     implementation core.loggingInterceptor
     implementation core.retrofitConverter
+    implementation core.room
+    kapt core.roomKapt
 }
