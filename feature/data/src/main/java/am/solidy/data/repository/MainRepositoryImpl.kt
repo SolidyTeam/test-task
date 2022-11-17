@@ -1,5 +1,7 @@
 package am.solidy.data.repository
 
+import am.solidy.core.delegate.Event
+import am.solidy.core.delegate.EventDelegate
 import am.solidy.core.repository.MainRepository
 import am.solidy.data.db.AppDatabase
 import am.solidy.data.db.mapper.MapperPostResponseToDb
@@ -18,26 +20,35 @@ class MainRepositoryImpl @Inject constructor(
     private val database: AppDatabase,
     private val userApi: UserApi,
     private val postApi: PostApi,
+    private val eventDelegate: EventDelegate
 ) : MainRepository {
     private val userDao = database.userDao
     private val postDao = database.postDao
 
     override suspend fun fetchData() {
-        withContext(Dispatchers.IO) {
-            val usersJob = async { userApi.getUsers() }
-            val postsJob = async { postApi.getPosts() }
+        try {
+            withContext(Dispatchers.IO) {
+                val usersJob = async { userApi.getUsers() }
+                val postsJob = async { postApi.getPosts() }
 
-            val users = usersJob.await()
-            val posts = postsJob.await()
+                val users = usersJob.await()
+                val posts = postsJob.await()
 
-            database.withTransaction {
-                userDao.insertUsers(
-                    MapperUserResponseToDb().map(users)
-                )
-                postDao.insertPosts(
-                    MapperPostResponseToDb().map(posts)
-                )
+                database.withTransaction {
+                    userDao.insertUsers(
+                        MapperUserResponseToDb().map(users)
+                    )
+                    postDao.insertPosts(
+                        MapperPostResponseToDb().map(posts)
+                    )
+                }
             }
+        } catch (ex: Exception) {
+            eventDelegate.postEvent(
+                Event.MessageEvent(
+                    message = ex.localizedMessage ?: ""
+                )
+            )
         }
     }
 }

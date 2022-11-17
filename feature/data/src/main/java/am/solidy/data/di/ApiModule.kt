@@ -3,6 +3,7 @@ package am.solidy.data.di
 import am.solidy.data.BuildConfig
 import am.solidy.data.network.api.PostApi
 import am.solidy.data.network.api.UserApi
+import am.solidy.data.network.interceptor.NoConnectionInterceptor
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
@@ -37,6 +38,7 @@ object ApiModule {
     @Singleton
     fun provideOkHttpClient(
         loggingInterceptor: HttpLoggingInterceptor,
+        noConnectionInterceptor: NoConnectionInterceptor
     ): OkHttpClient = OkHttpClient.Builder()
         .retryOnConnectionFailure(true)
         .followRedirects(true)
@@ -45,6 +47,7 @@ object ApiModule {
         .readTimeout(TIMEOUT_READ_SECONDS, TimeUnit.SECONDS)
         .writeTimeout(TIMEOUT_WRITE_SECONDS, TimeUnit.SECONDS)
         .addInterceptor(loggingInterceptor)
+        .addInterceptor(noConnectionInterceptor)
         .build()
 
 
@@ -57,6 +60,8 @@ object ApiModule {
             HttpLoggingInterceptor.Level.NONE
         }
     }
+
+
 
     @OptIn(ExperimentalSerializationApi::class)
     @Provides
