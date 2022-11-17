@@ -4,6 +4,17 @@ apply from: "${rootProject.projectDir}/common.gradle"
 
 android {
     namespace 'am.solidy.data'
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            buildConfigField "String", "API_BASE_URL", "\"https://my-json-server.typicode.com/\""
+        }
+        release {
+            minifyEnabled true
+            buildConfigField "String", "API_BASE_URL", "\"https://my-json-server.typicode.com/\""
+        }
+    }
 }
 
 dependencies {

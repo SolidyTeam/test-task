@@ -4,6 +4,9 @@ apply from: "${rootProject.projectDir}/common.gradle"
 
 android {
     namespace 'am.solidy.coreui'
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -11,4 +14,5 @@ dependencies {
 
     implementation core.appCompat
     implementation core.material
+    implementation core.lifecycle
 }

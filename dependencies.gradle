@@ -28,6 +28,9 @@ ext {
             fragmentKtx       : "androidx.fragment:fragment-ktx:$fragmentKtx",
             hiltCompiler      : "androidx.hilt:hilt-compiler:$hiltCompiler",
 
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:$NAV_VERSION",
+            navigationUi      : "androidx.navigation:navigation-ui-ktx:$NAV_VERSION",
+
             hilt              : "com.google.dagger:hilt-android:$HILT_VERSION",
             hiltKapt          : "com.google.dagger:hilt-compiler:$HILT_VERSION",
 
