@@ -25,4 +25,5 @@ dependencies {
     implementation core.navigationFragment
     implementation core.navigationUi
     implementation core.lifecycle
+    implementation core.coil
 }
