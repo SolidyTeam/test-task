@@ -11,4 +11,7 @@ interface UserWithPostsDao {
     @Query("SELECT * FROM users WHERE id = :userId")
     fun getUserWithPosts(userId: Int): Flow<UserWithPostsDbEntity?>
 
+    @Query("SELECT * FROM users")
+    fun getUsersWithPosts(): Flow<List<UserWithPostsDbEntity>>
+
 }
