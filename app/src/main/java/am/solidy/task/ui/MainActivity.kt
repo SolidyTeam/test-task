@@ -1,5 +1,6 @@
-package am.solidy.task
+package am.solidy.task.ui
 
+import am.solidy.task.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
