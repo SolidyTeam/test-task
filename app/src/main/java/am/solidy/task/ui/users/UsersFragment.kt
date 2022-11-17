@@ -22,16 +22,23 @@ class UsersFragment : BaseFragment<UsersViewModel>(R.layout.fragment_users) {
     override fun initView() = with(binding) {
         rvUsers.layoutManager = LinearLayoutManager(context)
         rvUsers.adapter = adapter
+        srUsers.setOnRefreshListener {
+            viewModel.getUsers()
+        }
     }
 
     override fun initObservers() {
         collectWhenStarted(viewModel.users) { users ->
-            val isLoading = users.isEmpty()
-            adapter.submitList(users)
-            with(binding) {
-                tvTitle.isVisible = !isLoading
-                rvUsers.isVisible = !isLoading
-                vLoading.root.isVisible = isLoading
+            users?.let {
+                val isLoading = users.isEmpty()
+                adapter.submitList(users){
+                    binding.srUsers.isRefreshing = false
+                }
+                with(binding) {
+                    tvTitle.isVisible = !isLoading
+                    srUsers.isVisible = !isLoading
+                    vLoading.root.isVisible = isLoading
+                }
             }
         }
     }

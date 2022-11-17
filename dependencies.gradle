@@ -3,6 +3,7 @@ ext {
     androidx_appcompat = '1.5.1'
     material = "1.7.0"
     constraintlayout = "2.1.4"
+    swiperefreshlayout = "1.1.0"
     lifecycle = "2.5.0"
     activityKtx = "1.5.1"
     fragmentKtx = "1.5.2"
@@ -26,6 +27,7 @@ ext {
             appCompat         : "androidx.appcompat:appcompat:$androidx_appcompat",
             material          : "com.google.android.material:material:$material",
             constraintlayout  : "androidx.constraintlayout:constraintlayout:$constraintlayout",
+            swiperefreshlayout: "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefreshlayout",
             lifecycle         : "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle",
             activityKtx       : "androidx.activity:activity-ktx:$activityKtx",
             fragmentKtx       : "androidx.fragment:fragment-ktx:$fragmentKtx",

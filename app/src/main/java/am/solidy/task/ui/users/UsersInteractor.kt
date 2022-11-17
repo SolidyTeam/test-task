@@ -6,7 +6,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flowOn
 
 class UsersInteractor @Inject constructor(
-    private val usersWithPostsRepository: UserWithPostsRepository
+    private val usersWithPostsRepository: UserWithPostsRepository,
 ) {
 
     fun getUsers() = usersWithPostsRepository.getUsers()

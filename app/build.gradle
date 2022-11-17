@@ -22,6 +22,7 @@ dependencies {
     implementation core.activityKtx
     implementation core.fragmentKtx
     implementation core.constraintlayout
+    implementation core.swiperefreshlayout
     implementation core.navigationFragment
     implementation core.navigationUi
     implementation core.lifecycle
