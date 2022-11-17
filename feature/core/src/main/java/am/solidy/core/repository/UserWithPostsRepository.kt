@@ -5,4 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface UserWithPostsRepository {
     fun getUserWithPosts(userId: Int): Flow<UserWithPostsEntity?>
+    fun getUsersWithPosts(): Flow<List<UserWithPostsEntity>>
 }

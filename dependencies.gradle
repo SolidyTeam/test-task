@@ -8,6 +8,7 @@ ext {
     fragmentKtx = "1.5.2"
     hiltCompiler = "1.0.0"
     coil = "2.2.2"
+    kielRecyclerView = "1.2.1"
 
     coroutines = "1.6.21"
     kotlin_serialization = '1.4.0'
@@ -32,6 +33,7 @@ ext {
             coil              : "io.coil-kt:coil:$coil",
             navigationFragment: "androidx.navigation:navigation-fragment-ktx:$NAV_VERSION",
             navigationUi      : "androidx.navigation:navigation-ui-ktx:$NAV_VERSION",
+            kielRecyclerView  : "io.github.ibrahimyilmaz:kiel:$kielRecyclerView",
 
             hilt              : "com.google.dagger:hilt-android:$HILT_VERSION",
             hiltKapt          : "com.google.dagger:hilt-compiler:$HILT_VERSION",

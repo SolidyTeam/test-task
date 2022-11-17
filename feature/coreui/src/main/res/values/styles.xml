@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text.Roboto" parent="">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="Text.Roboto.Medium" parent="">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="Text.Roboto.Bold" parent="">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Text.Black" parent="Text.Roboto">
+        <item name="android:textColor">@color/color_text</item>
+    </style>
+
+    <style name="Text.Black.Medium" parent="Text.Roboto.Medium">
+        <item name="android:textColor">@color/color_text</item>
+    </style>
+
+    <style name="Text.Black.Bold" parent="Text.Roboto.Bold">
+        <item name="android:textColor">@color/color_text</item>
+    </style>
+
+    <style name="Text.Gray" parent="Text.Roboto">
+        <item name="android:textColor">@color/color_gray</item>
+    </style>
+
+    <style name="Text.Gray.Medium" parent="Text.Roboto.Medium">
+        <item name="android:textColor">@color/color_gray</item>
+    </style>
+
+    <style name="Text.Gray.Bold" parent="Text.Roboto.Bold">
+        <item name="android:textColor">@color/color_gray</item>
+    </style>
+
+    <style name="Text.LightGray" parent="Text.Roboto">
+        <item name="android:textColor">@color/color_light_gray</item>
+    </style>
+
+    <style name="Text.LightGray.Medium" parent="Text.Roboto.Medium">
+        <item name="android:textColor">@color/color_light_gray</item>
+    </style>
+
+    <style name="Text.LightGray.Bold" parent="Text.Roboto.Bold">
+        <item name="android:textColor">@color/color_light_gray</item>
+    </style>
+
+    <style name="Text.Black.Bold.24" parent="Text.Black.Bold">
+        <item name="android:textSize">@dimen/sp_24</item>
+    </style>
+
+    <style name="Text.Black.Medium.20" parent="Text.Black.Medium">
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+    <style name="Text.Black.Medium.18" parent="Text.Black.Medium">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="Text.Black.Medium.16" parent="Text.Black.Medium">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="Text.Black.Medium.14" parent="Text.Black.Medium">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Text.Gray.14" parent="Text.Gray">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Text.LightGray.14" parent="Text.LightGray">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Text.LightGray.12" parent="Text.LightGray">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+</resources>

@@ -18,4 +18,9 @@ class UserWithPostsRepositoryImpl @Inject constructor(
         dao.getUserWithPosts(userId).map { userWithPosts ->
             userWithPosts?.let { MapperUserWithPostsDbEntityToDomain().map(userWithPosts) }
         }
+
+    override fun getUsersWithPosts(): Flow<List<UserWithPostsEntity>> =
+        dao.getUsersWithPosts().map { usersWithPosts ->
+            MapperUserWithPostsDbEntityToDomain().map(usersWithPosts)
+        }
 }

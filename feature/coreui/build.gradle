@@ -15,4 +15,5 @@ dependencies {
     implementation core.appCompat
     implementation core.material
     implementation core.lifecycle
+    implementation core.kielRecyclerView
 }

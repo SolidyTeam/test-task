@@ -26,4 +26,5 @@ dependencies {
     implementation core.navigationUi
     implementation core.lifecycle
     implementation core.coil
+    implementation core.kielRecyclerView
 }

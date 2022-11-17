@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">test-task</string>
+
+    <!-- Users -->
+    <string name="users_title">People</string>
+    <string name="users_post_count">Post count : </string>
+</resources>
