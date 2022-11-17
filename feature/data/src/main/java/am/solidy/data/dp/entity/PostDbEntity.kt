@@ -7,5 +7,7 @@ import androidx.room.PrimaryKey
 class PostDbEntity(
     @PrimaryKey
     val id: Int,
-    val userId: Int
+    val userId: Int,
+    val title: String,
+    val body: String
 )

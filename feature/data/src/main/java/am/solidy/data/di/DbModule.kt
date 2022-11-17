@@ -19,4 +19,16 @@ object DbModule {
         @ApplicationContext context: Context
     ) = AppDatabase.getInstance(context)
 
+    @Provides
+    @Singleton
+    fun provideUserDao(db: AppDatabase) = db.userDao
+
+    @Provides
+    @Singleton
+    fun providePostDao(db: AppDatabase) = db.postDao
+
+    @Provides
+    @Singleton
+    fun provideUserWithPostsDao(db: AppDatabase) = db.userWithPostsDao
+
 }
