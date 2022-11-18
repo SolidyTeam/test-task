@@ -3,5 +3,11 @@
 
     <!-- Users -->
     <string name="users_title">People</string>
-    <string name="users_post_count">Post count:</string>
+    <string name="users_post_count">Post count : </string>
+
+    <!-- User details -->
+    <string name="user_details_posts">Posts</string>
+    <string name="user_details_followers">Followers</string>
+    <string name="user_details_following">Following</string>
+
 </resources>
