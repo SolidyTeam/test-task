@@ -15,25 +15,40 @@
         style="@style/Text.Black.Medium.20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:visibility="visible"
-        android:visibility="gone"
         android:layout_marginStart="@dimen/dp_16"
-        android:text="@string/users_title" />
+        android:text="@string/users_title"
+        android:visibility="gone"
+        tools:visibility="visible" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/srUsers"
         android:layout_width="match_parent"
-        android:visibility="gone"
-        tools:visibility="visible"
         android:layout_height="@dimen/dp_0"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        tools:visibility="visible">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvUsers"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/dp_20"
-            tools:listitem="@layout/item_user" />
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvErrorMessage"
+                style="@style/Text.Gray.14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:gravity="center"
+                tools:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvUsers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_20"
+                tools:listitem="@layout/item_user" />
+        </FrameLayout>
+
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
@@ -42,7 +57,7 @@
         layout="@layout/layout_loading"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:visibility="gone"
-        android:visibility="visible" />
+        android:visibility="visible"
+        tools:visibility="gone" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
