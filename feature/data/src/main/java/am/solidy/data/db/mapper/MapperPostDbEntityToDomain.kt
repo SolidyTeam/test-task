@@ -9,6 +9,7 @@ class MapperPostDbEntityToDomain : Mapper<PostDbEntity, PostEntity> {
     override fun map(from: PostDbEntity): PostEntity = from.run {
         PostEntity(
             id = id,
+            userId = userId,
             title = title,
             body = body
         )

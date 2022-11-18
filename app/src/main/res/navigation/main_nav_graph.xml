@@ -9,5 +9,21 @@
         android:id="@+id/usersFragment"
         android:name="am.solidy.task.ui.users.UsersFragment"
         android:label="fragment_users"
-        tools:layout="@layout/fragment_users" />
+        tools:layout="@layout/fragment_users">
+
+        <action
+            android:id="@+id/actionToUserDetails"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="am.solidy.task.ui.user_details.UserDetailsFragment"
+        android:label="fragment_user_details"
+        tools:layout="@layout/fragment_user_details">
+
+        <argument
+            android:name="args"
+            app:argType="am.solidy.task.ui.user_details.UserDetailsArgs" />
+    </fragment>
 </navigation>

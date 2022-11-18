@@ -1,5 +1,6 @@
 package am.solidy.core.delegate
 
+import javax.inject.Inject
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -13,7 +14,7 @@ sealed interface Event {
 }
 
 @Singleton
-class EventDelegate {
+class EventDelegate @Inject constructor() {
 
     private val _eventChannel = MutableSharedFlow<Event>(
         extraBufferCapacity = 10,

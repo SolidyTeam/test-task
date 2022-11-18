@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:background="@drawable/bg_radius_bottom"
+    android:paddingBottom="@dimen/dp_52">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProfPic"
+        android:layout_width="@dimen/dp_95"
+        android:layout_height="@dimen/dp_95"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dp_20"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUsername"
+        style="@style/Text.Black.Bold.24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProfPic"
+        tools:text="User Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPostsCount"
+        style="@style/Text.Black.Medium.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tvPosts"
+        app:layout_constraintEnd_toEndOf="@id/tvPosts"
+        app:layout_constraintStart_toStartOf="@id/tvPosts"
+        tools:text="6" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPosts"
+        style="@style/Text.LightGray.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_62"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:text="@string/user_details_posts"
+        app:layout_constraintEnd_toStartOf="@id/tvFollowers"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvUsername" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFollowersCount"
+        style="@style/Text.Black.Medium.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tvFollowers"
+        app:layout_constraintEnd_toEndOf="@id/tvFollowers"
+        app:layout_constraintStart_toStartOf="@id/tvFollowers"
+        tools:text="281" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFollowers"
+        style="@style/Text.LightGray.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:text="@string/user_details_followers"
+        app:layout_constraintEnd_toStartOf="@id/tvFollowing"
+        app:layout_constraintStart_toEndOf="@id/tvPosts"
+        app:layout_constraintTop_toTopOf="@id/tvPosts" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFollowingCount"
+        style="@style/Text.Black.Medium.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tvFollowing"
+        app:layout_constraintEnd_toEndOf="@id/tvFollowing"
+        app:layout_constraintStart_toStartOf="@id/tvFollowing"
+        tools:text="668" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFollowing"
+        style="@style/Text.LightGray.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_details_following"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvFollowers"
+        app:layout_constraintTop_toTopOf="@id/tvFollowers" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
