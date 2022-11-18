@@ -32,7 +32,7 @@ class UserDetailsAdapter {
         )
     }
 
-    private inner class UserViewHolder(
+    private class UserViewHolder(
         view: View
     ) : RecyclerViewHolder<UserDetailItem.UserDetails>(view) {
 
