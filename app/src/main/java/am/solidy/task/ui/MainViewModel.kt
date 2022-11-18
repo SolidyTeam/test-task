@@ -1,21 +1,18 @@
 package am.solidy.task.ui
 
-import am.solidy.core.delegate.Event
 import am.solidy.core.delegate.EventDelegate
+import am.solidy.core.extensions.onEachMessageEvent
 import am.solidy.task.core.base.BaseViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val mainInteractor: MainInteractor,
     private val eventDelegate: EventDelegate
 ) : BaseViewModel() {
 
@@ -24,12 +21,9 @@ class MainViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            mainInteractor.fetchData()
-        }
-        viewModelScope.launch {
-            eventDelegate.events.filter { it is Event.MessageEvent }
-                .onEach {
-                    _showErrorMessage.send((it as Event.MessageEvent).message)
+            eventDelegate.events
+                .onEachMessageEvent {
+                    _showErrorMessage.send((it).message)
                 }.collect()
         }
     }
